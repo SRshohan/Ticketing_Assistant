@@ -1,2 +1,4 @@
-langchain-google-genai
+keyboard
 python-dotenv
+langchain-google-genai
+langchain-core

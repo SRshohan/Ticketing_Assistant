@@ -2,8 +2,6 @@ from dotenv import load_dotenv
 import os
 from langchain_google_genai import GoogleGenerativeAI, HarmBlockThreshold, HarmCategory
 from langchain_core.prompts import PromptTemplate
-import keyboard
-
 
 
 passw = os.getenv('ENV', 'local')
@@ -20,13 +18,14 @@ def load_llm():
     )
     return llm
 
-def template_of():
-    template = """I want you to act like professional IT expert and guide me through daily IT problems. I dont Understand what that mean, can you help me understand without yapping and precise respond: {question}
+def template_of(question):
+    template = """I want you to act like professional IT expert but give answer based on what i am looing for and guide me through daily IT problems. Like question I "dont Understand what that mean", "can you help me understand" without yapping and precise respond. I will peovide email or a problem to trouble shoot: {question}
 
-    Answer: Let's think of the problem in fundamental level. Then, Suggest me a professional reply for the ticketing system update. Then Ask related questions to more specify the service. Make sure couple things for reply:
-    1. Hi and full name of the person. Thanks the person for reaching out for first time respond.
-    "Ask a follow up questions if needs to", "Suggest appropriate reply based on the problem", "Rewrite my message"
-    Sign my name Sohanur
+    Answer: Let's think of the problem in fundamental level and high level first. 
+    1. Explain possible reason behind it with bullet points precise explaination.
+    2. Ask for possible follow question (Give multiple option). Then Ask related questions to more specify the service or to the problem has been reffered.
+    3. Then, Suggest me a professional reply for the ticketing system update.  
+    Make sure couple things for reply: Hi and full name of the person. Thanks the person for reaching out for first time respond. Sign my name Sohanur
 
     """
    
@@ -35,12 +34,12 @@ def template_of():
 
     chain = prompt | load_llm()
 
-    question = """HI, there,
-this is a follow-up to the advice Kevin Clancy gave (see below) about asking for your guidance to save the emails I'd like to keep before having my computer(s) wiped. 
+#     question = """HI, there,
+# this is a follow-up to the advice Kevin Clancy gave (see below) about asking for your guidance to save the emails I'd like to keep before having my computer(s) wiped. 
 
-Many thanks, as always.
-Sister Remigia, Ask like questions, she want to backup all the emails in drive or related to it"""
-    print(chain.invoke({"question": question}))
+# Many thanks, as always.
+# Sister Remigia, Ask like questions, she want to backup all the emails in drive or related to it"""
+    return chain.invoke({"question": question})
 
 
 

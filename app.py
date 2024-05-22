@@ -4,7 +4,7 @@ from ticket_assist import template_of
 app = Flask(__name__)
 
 
-@app.route("/paragraph", methods= ['GET', 'POST'])
+@app.route("/home", methods= ['GET', 'POST'])
 def para():
     question = ''
     result = None

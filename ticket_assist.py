@@ -35,17 +35,20 @@ def template_of(question):
     prompt2 = PromptTemplate.from_template(template2)
     prompt3 = PromptTemplate.from_template(template3)
 
-    chain1 = prompt1 | load_llm()
-    chain2 = prompt2 | load_llm()
-    chain3 = prompt3 | load_llm()
+    try:
+        chain1 = prompt1 | load_llm()
+        chain2 = prompt2 | load_llm()
+        chain3 = prompt3 | load_llm()
 
-    c1 = chain1.invoke({"question": question})
-    c2 = chain2.invoke({"question": question})
-    c3 = chain3.invoke({"question": question})
+        c1 = chain1.invoke({"question": question})
+        c2 = chain2.invoke({"question": question})
+        c3 = chain3.invoke({"question": question})
 
-    data["reason"] = c1
-    data["options"] = c2
-    data["response"] = c3
+    except Exception as e:
+        # Handle any errors, e.g., logging, fallback responses, etc.
+        data["reason"] = "Sorry, I couldn't process your request at the moment. Please try again later."
+        data["options"] = ""
+        data["response"] = ""
 
 
     return data

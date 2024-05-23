@@ -3,20 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Paragraph</title>
+    <title>Organized Result</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+    <script src="/static/js/script.js" defer></script>
 </head>
 <body>
-    <h2>Input and Result</h2>
-    {% if result %}
-        <p>Your input: {{ user_input }}</p>
-        <p>Result: {{ result }}</p>
-    {% endif %}
-    <form method="post">
-        <label for="user_input">Enter something:</label>
-        <textarea id="user_input" name="user_input">{{ user_input or '' }}</textarea>
-        <input type="submit" value="Submit">
-    </form>
-    
+    <div class="container" id="result-container">
+        <!-- Dynamic content will be added here -->
+    </div>
 </body>
 </html>
+
+
 

@@ -2,8 +2,7 @@
 
 This is a Python program that uses Gemini's language model to assist with writing tasks. It provides two main functions:
 
-1. AI Assist: Press 'Ctrl+Shift+A' to activate AI assist, which generates AI text based on the user's input prompt.
-2. Summarization: Press 'Enter' to summarize the user's input prompt.
+### IT Ticketing System Assistance: Enter the problem to get a reply with possible solutions and troubleshooting steps. Simply type your questions and receive an answer.
 
 ## Installation
 
@@ -11,5 +10,10 @@ This is a Python program that uses Gemini's language model to assist with writin
 
    ```bash
    git clone https://github.com/yourusername/ai-writer.git
+   ```
 
-2. pip install -r requirements.txt 
+2. Installing dependacies
+
+   ```bash
+   pip install -r requirements.txt 
+   ```

@@ -43,6 +43,9 @@ def template_of(question):
         c1 = chain1.invoke({"question": question})
         c2 = chain2.invoke({"question": question})
         c3 = chain3.invoke({"question": question})
+        data['reason'] = c1
+        data["options"] = c2
+        data["response"] = c3
 
     except Exception as e:
         # Handle any errors, e.g., logging, fallback responses, etc.
@@ -59,5 +62,5 @@ def template_of(question):
 if __name__ == '__main__':
     question = "Hello, I have a second monitor that suddenly stopped connecting to my laptop and I'm struggling to figure out why. Could someone stop by this week to assist? I am available between 2-4PM today and between Noon and 3:30 PM tomorrow. Thank you! Best, Chloe"
     generated = template_of(question)
-    print(generated['reason'])
+    print(generated)
     

@@ -4,12 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Organized Result</title>
-    <link rel="stylesheet" href="/static/css/styles.css">
-    <script src="/static/js/script.js" defer></script>
+    <!-- <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}"> -->
+    <!-- <script src="/static/js/script.js" defer></script> -->
 </head>
 <body>
     <div class="container" id="result-container">
+        <!-- <table> 
+            {% if result %}
+                {% for key, value in result.items() %}
+                <tr>
+                    <td>{{ value }}</td>
+                </tr>
+                {% endfor %}
+            {% endif %}
+        </table> -->
+
+        {% if questions %}
+            <p>{{ questions }}</p>
+        {% endif %}
         <!-- Dynamic content will be added here -->
+       <!-- <p> Welcome to the page</p> -->
     </div>
 </body>
 </html>

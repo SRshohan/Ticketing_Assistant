@@ -31,3 +31,14 @@ body {
 .box p {
     white-space: pre-wrap; /* Preserve formatting */
 }
+table {
+    width: 50%;
+    border-collapse: collapse;
+}
+table, th, td {
+    border: 1px solid black;
+}
+th, td {
+    padding: 10px;
+    text-align: left;
+}

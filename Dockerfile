@@ -12,4 +12,7 @@ RUN pip install -r requirements.txt
 
 EXPOSE 5000
 
+ENV GOOGLE_API_KEY=${GOOGLE_API_KEY}
+
+
 CMD [ "python", "./app.py" ]

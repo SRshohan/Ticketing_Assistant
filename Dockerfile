@@ -15,4 +15,4 @@ EXPOSE 5000
 ENV GOOGLE_API_KEY=${GOOGLE_API_KEY}
 
 
-CMD [ "python", "./app.py" ]
+CMD [ "python", "app.py" ]

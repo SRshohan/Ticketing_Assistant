@@ -17,7 +17,8 @@ This is a Python program that uses Gemini's language model to assist with writin
    ```bash
    docker-compose up --build
    ```
-Make sure to be in the directory of the project
+# Make sure to be in the directory of the project
+
 3. Access through:
    ```bash
    https//:127.0.0.1:5001/home

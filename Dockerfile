@@ -10,8 +10,9 @@ COPY . .
 RUN pip install -r requirements.txt
 
 
-EXPOSE 5000
+EXPOSE 5001
 
+ENV FLASK_ENV=devlopment
 ENV GOOGLE_API_KEY=${GOOGLE_API_KEY}
 
 

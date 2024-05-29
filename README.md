@@ -12,8 +12,14 @@ This is a Python program that uses Gemini's language model to assist with writin
    git clone https://github.com/yourusername/ai-writer.git
    ```
 
-2. Installing dependacies
+2. Installing dependacies and create images
 
    ```bash
-   pip install -r requirements.txt 
+   docker-compose up --build
    ```
+Make sure to be in the directory of the project
+3. Access through:
+   ```bash
+   https//:127.0.0.1:5001/home
+   ```
+ 

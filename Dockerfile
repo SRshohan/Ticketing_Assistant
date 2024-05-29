@@ -15,4 +15,4 @@ EXPOSE 5000
 ENV GOOGLE_API_KEY=${GOOGLE_API_KEY}
 
 
-CMD [ "python", "app.py" ]
+CMD [ "python3", "-m" , "flask", "run", "--host=0.0.0.0"]
